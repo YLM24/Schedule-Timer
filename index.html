@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Timer</title>
+    <script src="main.js" defer></script>
+    <script src="TaskManager.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 class="mainTitle">Schedule Timer</h1>
+    <div class="pomodoroContainer">
+        <div class="typePomo">
+            <button id="t1">Pomodoro</button>
+            <button id="t2">Descanso corto</button>
+            <button id="t3">Descanso Largo</button>
+        </div>
+        <p id="timer">25:00</p>
+        <div class="mainButtons">
+            <button id="principal"  onclick="startPomodoro();">Iniciar</button>
+            <button id="detener" onclick="detenerTemporizador();">pausar</button>
+        </div>
+    </div>
+    <div class="taskContainer">
+        <div class="to-do-app">
+            <h2 id="titleTask">Lista de tareas</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Añade tu tarea">
+                <button class="btnAñadir" onclick="addtask()">Añadir </button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    <div class="noteContainer">
+        <h2 class="noteTitle">Anotaciones</h2>
+        <textarea name="noteArea" id="noteArea"></textarea>
+    </div>
+
+    
+</body>
+</html>

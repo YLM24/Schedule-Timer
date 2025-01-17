@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: url(img/59c9f4672da97b27c2d877a076e24994.png);
+    width: 100%;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.mainTitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    font-size: 60px;
+    position: absolute;
+    left: 550px;
+    top: 60px;
+}
+
+/* Container pomodoro */
+
+.pomodoroContainer {
+    background-color: rgba(23, 23, 23, 0.797);
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#principal {
+    position: absolute;
+    padding: 5px;
+    margin: 20px;
+    bottom: 35px;
+    width: 80%;
+    left: 10px;
+    color: aliceblue;
+    background-color: rgb(0, 106, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#principal:hover{
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 250, 243);
+}
+
+#detener {
+    position: absolute;
+    padding: 5px;
+    margin: 20px;
+    bottom: 2px;
+    width: 80%;
+    left: 10px;
+    color: aliceblue;
+    background-color: rgb(10, 63, 137);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#detener:hover{
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 250, 243);
+}
+
+
+.pomodoroContainer p {
+    color: white;
+    position: absolute;
+    top: 130px;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.typePomo {
+    position: absolute;
+    top: 1px;
+    
+    
+}
+
+.typePomo button{
+    cursor: pointer;
+    color: aliceblue;
+    background-color: rgba(23, 23, 23, 0);
+    border: none;
+    padding: 6.5px;
+    
+}
+
+#t1::after{
+    content: " ";
+    position: absolute;
+    left: 4px;
+    bottom: -6px;
+    width: 70px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;  
+    transform: scaleX(0);
+    transition: .5s;
+    
+
+}
+
+#t1:hover::after{
+    transform: scaleX(1);
+}
+
+#t2::after{
+    content: " ";
+    position: absolute;
+    left: 80px;
+    bottom: -6px;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;  
+    transform: scaleX(0);
+    transition: .5s;
+    
+
+}
+
+#t2:hover::after{
+    transform: scaleX(1);
+}
+
+#t3::after{
+    content: " ";
+    position: absolute;
+    left: 192px;
+    bottom: -6px;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;  
+    transform: scaleX(0);
+    transition: .5s;
+    
+
+}
+
+#t3:hover::after{
+    transform: scaleX(1);
+}
+
+/* .typePomo button:hover{
+    transition: 0.5s;
+    
+    border-bottom: 2px solid white;
+} */
+
+/* task manager */
+
+.to-do-app{
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    background-color: rgba(23, 23, 23, 0.797);
+    width: 400px;
+    height: 290px;
+    position: absolute;
+    top: 100px;
+    left: 530px;
+    overflow: hidden;
+}
+
+.to-do-app h2{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left:  20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+
+.btnAñadir{
+    border: 1px solid;
+    outline: none;
+    padding: 12px 30px;
+    background-color: rgb(0, 106, 255);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.btnAñadir:hover {
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 250, 243);
+    border: 0.2px solid #282828;
+}
+
+
+
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #908e8e;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(img/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right:  0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #282828;
+    border-radius: 50%;
+}
+
+/* Anotaciones */
+
+.noteContainer {
+    background-color: rgba(23, 23, 23, 0.797);
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: 1020px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.noteTitle {
+    position: absolute;
+    top: 45px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#noteArea{
+    position: absolute;
+    top: 90px;
+    background-color: #ffffff;
+    width: 240px;
+    max-width: 240px;
+    height: 280px;
+    max-height: 280px;
+    border-radius: 20px;
+    background-color: #252424;
+    color: aliceblue;
+    padding: 10px;
+    padding-bottom: 0px;
+
+}
